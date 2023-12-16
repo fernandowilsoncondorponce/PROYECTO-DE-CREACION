@@ -9,9 +9,9 @@ mb_http_output('UTF-8');
     
 // foreach ($todaLasAreas[$e] as $key => $value) {
 
-//   if ($key == "CIENCIA SOCIALES" && $value[0] == "Competencia1") {
-//         echo " " $value[1] ." ";
-//     }
+// if ($key == "EDUCACION PARA EL TRABAJO " && $value[0] == "Competencia1") {
+// //         echo "<br>" . "La constancia1 tu nota es ". $value[1] ."<br>";
+// //   }
 
 //     //AHORA SE PUEDE REALIZAR LOS IF PORQUE COMPARARA POR CADA LLAVE
   
@@ -20,7 +20,9 @@ mb_http_output('UTF-8');
 
 // }
 
-
+// if ($key == "CIENCIA SOCIALES" && $value[0] == "Competencia1") {
+//         echo " ". $value[1] ." ";
+//   }
 
 // if ($key == "CIENCIA SOCIALES" && $value[0] == "Competencia2") {
 //         echo "<br>" . "La constancia2 tu nota es ". $value[1] ."<br>";
@@ -355,7 +357,7 @@ div.WordSection1
   page;mso-element-anchor-horizontal:margin;mso-element-top:39.8pt;mso-height-rule:
   exactly'><b style='mso-bidi-font-weight:normal'><span style='font-size:7.0pt;
   mso-bidi-font-size:11.0pt;font-family:"Arial",sans-serif;mso-ansi-language:
-  ES-PE'> &nbsp; </span></b></p>
+  ES-PE'>TOLENTINO LIBERATO MANELA </span></b></p>
    
   <td style='mso-cell-special:placeholder;border:none;border-bottom:solid windowtext 1.0pt'
   width=1><p class='MsoNormal'>&nbsp; 
@@ -494,7 +496,23 @@ foreach ($todaLasAreas[$e] as $key => $value) {
   mso-element-frame-hspace:7.05pt;mso-element-wrap:around;mso-element-anchor-vertical:
   page;mso-element-anchor-horizontal:margin;mso-element-top:39.8pt;mso-height-rule:
   exactly'><b style='mso-bidi-font-weight:normal'><span style='font-size:10.0pt;
-  font-family:"Arial",sans-serif;mso-ansi-language:ES-PE'> &nbsp; </span></b></p>
+  font-family:"Arial",sans-serif;mso-ansi-language:ES-PE'> <?php 
+
+ for ($e=0; $e < $count; $e++) { 
+    
+foreach ($todaLasAreas[$e] as $key => $value) {
+
+if ($key == "CIENCIA SOCIALES" && $value[0] == "Competencia2") {
+        echo " ". $value[1] ." ";
+  }
+
+    //AHORA SE PUEDE REALIZAR LOS IF PORQUE COMPARARA POR CADA LLAVE
+  
+}
+
+
+}
+?></span></b></p>
    
   <td width=276 colspan=2 style='width:207.35pt;border: 1px solid #c0c0c0;padding:0cm 0cm 0cm 0cm;height:20.3pt'>
   <p class=TableParagraph style='mso-element:frame;mso-element-frame-hspace:
@@ -622,7 +640,20 @@ foreach ($todaLasAreas[$e] as $key => $value) {
   mso-element-anchor-vertical:page;mso-element-anchor-horizontal:margin;
   mso-element-top:39.8pt;mso-height-rule:exactly'><b style='mso-bidi-font-weight:
   normal'><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-ansi-language:ES-PE'> &nbsp; </span></b></p>
+  mso-ansi-language:ES-PE'> <?php 
+   for ($e=0; $e < $count; $e++) { 
+    
+foreach ($todaLasAreas[$e] as $key => $value) {
+
+if ($key == "EDUCACION PARA EL TRABAJO " && $value[0] == "Competencia1") {
+        echo " ". $value[1] ." ";
+  }
+
+    //AHORA SE PUEDE REALIZAR LOS IF PORQUE COMPARARA POR CADA LLAVE
+  
+}
+}
+//  ?>  </span></b></p>
    
   <td width=276 colspan=2 style='width:207.35pt;border: 1px solid #c0c0c0;padding:0cm 0cm 0cm 0cm;height:14.5pt'>
   <p class=TableParagraph style='mso-element:frame;mso-element-frame-hspace:
@@ -655,7 +686,24 @@ foreach ($todaLasAreas[$e] as $key => $value) {
   around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:margin;
   mso-element-top:39.8pt;mso-height-rule:exactly'><b style='mso-bidi-font-weight:
   normal'><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-ansi-language:ES-PE'> &nbsp; </span></b></p>
+  mso-ansi-language:ES-PE'> 
+
+  <?php
+
+ for ($e=0; $e < $count; $e++) { 
+    
+foreach ($todaLasAreas[$e] as $key => $value) {
+
+if ($key == "EDUCACIÓN FISICA" && $value[0] == "Competencia1") {
+        echo " ". $value[1] ." ";
+  }
+
+    //AHORA SE PUEDE REALIZAR LOS IF PORQUE COMPARARA POR CADA LLAVE
+  
+}
+}
+
+   ?> </span></b></p>
    
   <td width=276 colspan=2 style='width:207.35pt;border: 1px solid #c0c0c0;padding:0cm 0cm 0cm 0cm;height:13.7pt'>
   <p class=TableParagraph style='margin-left:1.95pt;mso-element:frame;
@@ -679,7 +727,24 @@ foreach ($todaLasAreas[$e] as $key => $value) {
   around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:margin;
   mso-element-top:39.8pt;mso-height-rule:exactly'><b style='mso-bidi-font-weight:
   normal'><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-ansi-language:ES-PE'> &nbsp; </span></b></p>
+  mso-ansi-language:ES-PE'>
+
+  <?php  
+for ($e=0; $e < $count; $e++) { 
+    
+foreach ($todaLasAreas[$e] as $key => $value) {
+
+if ($key == "EDUCACIÓN FISICA" && $value[0] == "Competencia2") {
+        echo " ". $value[1] ." ";
+  }
+
+    //AHORA SE PUEDE REALIZAR LOS IF PORQUE COMPARARA POR CADA LLAVE
+  
+}
+}
+
+  ?>
+   </span></b></p>
    
   <td width=276 colspan=2 style='width:207.35pt;border: 1px solid #c0c0c0;padding:0cm 0cm 0cm 0cm;height:14.5pt'>
   <p class=TableParagraph style='margin-left:1.95pt;mso-element:frame;
@@ -704,7 +769,25 @@ foreach ($todaLasAreas[$e] as $key => $value) {
   around;mso-element-anchor-vertical:page;mso-element-anchor-horizontal:margin;
   mso-element-top:39.8pt;mso-height-rule:exactly'><b style='mso-bidi-font-weight:
   normal'><span style='font-size:10.0pt;font-family:"Arial",sans-serif;
-  mso-ansi-language:ES-PE'> &nbsp; </span></b></p>
+  mso-ansi-language:ES-PE'> 
+
+ <?php  
+for ($e=0; $e < $count; $e++) { 
+    
+foreach ($todaLasAreas[$e] as $key => $value) {
+
+if ($key == "EDUCACIÓN FISICA" && $value[0] == "Competencia3") {
+        echo " ". $value[1] ." ";
+  }
+
+    //AHORA SE PUEDE REALIZAR LOS IF PORQUE COMPARARA POR CADA LLAVE
+  
+}
+}
+
+  ?>
+
+   </span></b></p>
    
   <td width=276 colspan=2 style='width:207.35pt;border: 1px solid #c0c0c0;padding:0cm 0cm 0cm 0cm;height:14.5pt'>
   <p class=TableParagraph style='margin-left:1.95pt;mso-element:frame;

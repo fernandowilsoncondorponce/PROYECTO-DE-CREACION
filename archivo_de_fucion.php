@@ -60,9 +60,9 @@ if ($result->num_rows > 0) {
     // Mostrar los datos del alumno y sus competencias y notas de los profesores
     $row = $result->fetch_assoc();
     $alumno = $row["nomAlumno"];
-    // echo '<br>';
+    echo '<br>';
     // echo "ID ALUMNO " . $row["idAlumno"] ."<br>";
-    // echo "Alumno: " . $alumno . "<br>";
+    echo "Alumno: " . $alumno . "";
 
 //array de cada libreria
 $todaLasAreas = array();
@@ -74,10 +74,9 @@ $comNota= array();
 //la libreria
 $alumBucle = array();
 
-    	 //CANTIDAD DE DATOS = B = 1 luego ....
-        // [ALUMNO[B]]
+    
         //USA EL NUMERO 1 PARA  GUARDA EL EL UNO y
-        //aqui
+   
         $profesor = $row["nomProf"];
 
         $curso = $row["curProf"];
@@ -85,7 +84,7 @@ $alumBucle = array();
         $competencia = $row["CompetReg"];
 
         $nota = $row["notaReg"];
-          //en CADA POSICION DE GUARDA
+          
         $descripcion = $row["conclDescReg"];
 
 
@@ -97,142 +96,86 @@ array_push($todaLasAreas,$alumBucle);
 
 
 
+} while ($row = $result->fetch_assoc());
 
-    } while ($row = $result->fetch_assoc());
 
-
-// print_r($todaLasAreas); 
+print_r($todaLasAreas); 
 
 $count = count($todaLasAreas);
-//PASAR PRIMERO CONTAR TODOS LOS ARRAY PARA PASAR POR 
-//TODOS LAS LLAVES
-ob_start();
-include 'html.php';
-$html = ob_get_clean();
 
-// Crear una instancia de mPDF
-$pdf = new \Mpdf\Mpdf();
-// Opcional: Configurar opciones de mPDF
-
-// Agregar una página
-$pdf->AddPage();
-
-// Escribir el contenido HTML en el archivo PDF
-$pdf->WriteHTML($html);
-
-// Generar el archivo PDF
-$nombreArchivo = __DIR__ . '/' . $alumno . '.pdf';
-
-    // Guardar el archivo PDF en la misma carpeta que el archivo PHP
-   $pdf->Output($nombreArchivo, 'F');
-//  for ($e=0; $e < $count; $e++) { 
+// *****************
+//  //AHORA SE PUEDE REALIZAR LOS IF PORQUE COMPARARA POR CADA LLAVE
+ for ($e=0; $e < $count; $e++) { 
     
-// foreach ($todaLasAreas[$e] as $key => $value) {
+foreach ($todaLasAreas[$e] as $key => $value) {
+// echo " ".$key  ."<br> " ;
+if ($key == "CCSS" && $value[0] == "Competencia1") {
+        echo "<br>".$key  ."<br>";
+        echo "" . "  La competencia1 = ". $value[1] ."";
+  }
 
-//   echo  "<br>". $key . "<br>";
-//   VALIDAR CADA LLAVE CON SU Competencia porque el array tiene niveles 
-//   if ($key == "CIENCIA SOCIALES" && $value[0] == "Competencia1") {
-//         echo "<br>" . "La constancia1 tu nota es ". $value[1] ."<br>";
-//     }
+if ($key == "CCSS" && $value[0] == "Competencia2") {
+     echo " <br>".$key  ."<br>";
+        echo " La competencia2 =". $value[1] ." ";
+  }
 
-//     //AHORA SE PUEDE REALIZAR LOS IF PORQUE COMPARARA POR CADA LLAVE
-//   if ($key == "CIENCIA SOCIALES" && $value[0] == "Competencia2") {
-//         echo "<br>" . "La constancia2 tu nota es ". $value[1] ."<br>";
-//   }
+if ($key == "CCSS" && $value[0] == "Competencia3") {
+     echo " <br>".$key  ."<br>";
+        echo "" . "La competencia3 =  ". $value[1] ."";
+  }
 
-//    if ($key == "EDUCACION PARA EL TRABAJO " && $value[0] == "Competencia1") {
-//         echo "<br>" . "La constancia1 tu nota es ". $value[1] ."<br>";
-//   }
-// }
-// // echo $e;
+   if ($key == "EPT" && $value[0] == "Competencia1") {
+    echo "<br> ".$key  ."<br>";
+        echo "" . "La competencia1 = ". $value[1] ."";
+  }
 
-// }
+   if ($key == "EF" && $value[0] == "Competencia1") {
+    echo "<br> ". $key  ."<br>";
+        echo "" . "La competencia1 = ". $value[1] ."";
+  }
+   
+    if ($key == "EF" && $value[0] == "Competencia2") {
+        echo "<br> ".$key  ."<br> ";
+        echo "" . "La competencia2 = ". $value[1] ."";
+  }
+  if ($key == "EF" && $value[0] == "Competencia3") {
+    echo "<br> ".$key  ."<br>";
+        echo "" . "La competencia3 = ". $value[1] ."";
+  }
 
+   if ($key == "COM" && $value[0] == "Competencia1") {
+    echo "<br> ".$key  ."<br>";
+        echo "" . "La competencia1 = ". $value[1] ."";
+  }
 
+   if ($key == "COM" && $value[0] == "Competencia2") {
+    echo "<br> ".$key  ."<br>";
+        echo "" . "La competencia2 = ". $value[1] ."";
+  }
 
-
-
-
-
-// echo "Se ha generado el archivo PDF para el usuario: " . $nombre . "<br>";
-
-
-}else {
-    // echo "No se encontraron resultados.";
+   if ($key == "COM" && $value[0] == "Competencia3") {
+    echo "<br> ".$key  ."<br>";
+        echo "" . "La competencia3 = ". $value[1] ."";
+  }
+   if ($key == "ING" && $value[0] == "Competencia1") {
+    echo "<br> ".$key  ."<br>";
+        echo "" . "La competencia1 = ". $value[1] ."";
+  }
+  if ($key == "ING" && $value[0] == "Competencia2") {
+    echo "<br> ".$key  ."<br>";
+        echo "" . "La competencia2 = ". $value[1] ."";
+  }
+  if ($key == "ING" && $value[0] == "Competencia3") {
+    echo "<br> ".$key  ."<br>";
+        echo "" . "La competencia3 = ". $value[1] ."<br>";
+  }
 }
-
-
 }
+// ************************
 
-
-}
-
-$conn->close();
-
-
-
-
-
-// require_once 'vendor/tecnickcom/tcpdf/tcpdf.php';
-// // Recorrer los usuarios
-// $usuarios = [
-//     [
-//         'nombre' => 'John Doe',
-//         'edad' => 30,
-//     ],
-//     [
-//         'nombre' => 'Jane Smith',
-//         'nombre' => 'Jane Smith',
-//         'edad' => 25,
-//     ],
-//     // Agrega más usuarios aquí
-// ];
-// foreach ($usuarios as $usuario) {
-//     $nombre = $usuario['nombre'];
-//     $edad = $usuario['edad'];
-
-//     // Crear el objeto TCPDF
-//     $pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8');
-
-//     // Establecer el título del documento
-//     $pdf->SetTitle('Información del usuario');
-
-//     // Agregar una página al documento
-//     $pdf->AddPage();
-
-//     // Configurar el estilo de fuente
-//     $pdf->SetFont('Helvetica', '', 12);
-
-//     // Establecer el contenido del PDF
-//     $contenido = "Nombre: " . $nombre . "\n";
-//     $contenido .= "Edad: " . $edad . "\n";
-
-//     // Agregar el contenido al PDF
-//     $pdf->MultiCell(0, 10, $contenido);
-
-//     // Generar el nombre del archivo
-//     $nombreArchivo = __DIR__ . '/' . $nombre . '.pdf';
-
-//     // Guardar el archivo PDF en la misma carpeta que el archivo PHP
-//     $pdf->Output($nombreArchivo, 'F');
-
-//     echo "Se ha generado el archivo PDF para el usuario: " . $nombre . "<br>";
-// }
-
-// echo "Se han generado los archivos PDF para todos los usuarios.";
-
-
-
-
-
-
-// require_once __DIR__ . '/vendor/autoload.php';
-
-// $nombre = "John Doe";
-// $edad = 30;
-
+// //PASAR PRIMERO CONTAR TODOS LOS ARRAY PARA PASAR POR 
+// //TODOS LAS LLAVES
 // ob_start();
-
 // include 'html.php';
 // $html = ob_get_clean();
 
@@ -247,8 +190,23 @@ $conn->close();
 // $pdf->WriteHTML($html);
 
 // // Generar el archivo PDF
-// $pdf->Output('mi_archivo.pdf', 'D');
+// $nombreArchivo = __DIR__ . '/' . $alumno . '.pdf';
+
+//     // Guardar el archivo PDF en la misma carpeta que el archivo PHP
+//    $pdf->Output($nombreArchivo, 'F');
+   
+//    
+//    ***********************************
 
 
+
+}else {
+    // echo "No se encontraron resultados.";
+}
+
+}
+
+}
+$conn->close();
 
  ?>
